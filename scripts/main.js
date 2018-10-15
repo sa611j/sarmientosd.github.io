@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 Google Inc. All Rights Reserved.
+ * Copyright 2015 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -63,7 +63,7 @@ function loadMessages() {
 
 // Saves a new message on the Firebase DB.
 function saveMessage(messageText) {
-  // Add a new message entry to the Firebase Database.
+  // Add a new message entry to the Firebase database.
   return firebase.database().ref('/messages/').push({
     name: getUserName(),
     text: messageText,
@@ -87,7 +87,7 @@ function saveImageMessage(file) {
     return firebase.storage().ref(filePath).put(file).then(function(fileSnapshot) {
       // 3 - Generate a public URL for the file.
       return fileSnapshot.ref.getDownloadURL().then((url) => {
-        // 4 - Update the chat message placeholder with the image's URL.
+        // 4 - Update the chat message placeholder with the image’s URL.
         return messageRef.update({
           imageUrl: url,
           storageUri: fileSnapshot.metadata.fullPath
@@ -298,19 +298,6 @@ var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
-
-//
-var link = document.getElementById('getNumber'); // Gets the link
-link.onclick = getNumber; // Runs the function on click
-
-function getNumber() {
-    var minNumber = 0; // The minimum number you want
-    var maxNumber = 100; // The maximum number you want
-    var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
-    $('#myNumber').html(randomnumber); // Sets content of <div> to number
-    return false; // Returns false just to tidy everything up
-}
-
 
 // Saves message on form submit.
 messageFormElement.addEventListener('submit', onMessageFormSubmit);
