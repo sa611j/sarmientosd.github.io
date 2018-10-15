@@ -1,6 +1,8 @@
 {
   "projects": {
     "fer": "friendlychat-5ca7a",
-    "default": "friendlychat-5ca7a"
+    "default": "friendlychat-5ca7a",
+    "fernand": "friendlychat-5ca7a",
+    "fernando": "friendlychat-5ca7a"
   }
 }
