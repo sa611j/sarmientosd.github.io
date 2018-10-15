@@ -6,11 +6,19 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "public",
+    "public": "./",
     "ignore": [
       "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+      "database-rules.json",
+      "storage.rules",
+      "functions"
+    ],
+    "headers": [{
+      "source" : "**/*.@(js|html)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=0"
+      } ]
+    }]
   }
 }
