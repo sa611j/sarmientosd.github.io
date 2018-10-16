@@ -122,6 +122,7 @@ main, #messages-card {
 }
 .mdl-card {
   min-height: 0;
+  display:inline-block;
 }
 .mdl-card {
   background: linear-gradient(white, #f9f9f9);

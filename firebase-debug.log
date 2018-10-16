@@ -1,0 +1,25 @@
+[debug] [2018-10-16T01:32:40.709Z] ----------------------------------------------------------------------
+[debug] [2018-10-16T01:32:40.709Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fsarm\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only hosting
+[debug] [2018-10-16T01:32:40.709Z] CLI Version:   5.0.1
+[debug] [2018-10-16T01:32:40.709Z] Platform:      win32
+[debug] [2018-10-16T01:32:40.709Z] Node Version:  v8.11.4
+[debug] [2018-10-16T01:32:40.709Z] Time:          Tue Oct 16 2018 10:32:40 GMT+0900 (Tokyo Standard Time)
+[debug] [2018-10-16T01:32:40.709Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-16T01:32:40.725Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-16T01:32:40.725Z] > authorizing via signed-in user
+[debug] [2018-10-16T01:32:40.725Z] [iam] checking project tisaapp-19140 for permissions ["firebase.projects.get"]
+[debug] [2018-10-16T01:32:40.741Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tisaapp-19140:testIamPermissions  
+
+[debug] [2018-10-16T01:32:41.513Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-16T01:32:41.513Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tisaapp-19140  
+ 
+[debug] [2018-10-16T01:32:42.260Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\fsarm\Documents\GitHub\sarmientosd.github.io'...
+[info] 
+[debug] [2018-10-16T01:32:42.260Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/715090258170/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-16T01:32:43.061Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000

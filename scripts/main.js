@@ -178,6 +178,7 @@ function authStateObserver(user) {
     userNameElement.removeAttribute('hidden');
     userPicElement.removeAttribute('hidden');
     signOutButtonElement.removeAttribute('hidden');
+    messageInfo.removeAttribute('hidden');
 
     // Hide sign-in button.
     signInButtonElement.setAttribute('hidden', 'true');
@@ -282,6 +283,7 @@ function checkSetup() {
   }
 }
 
+//
 // Checks that Firebase has been imported.
 checkSetup();
 
@@ -298,7 +300,7 @@ var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
-
+var messageInfo = document.getElementById('messages-card');
 // Saves message on form submit.
 messageFormElement.addEventListener('submit', onMessageFormSubmit);
 signOutButtonElement.addEventListener('click', signOut);
