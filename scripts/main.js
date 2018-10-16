@@ -178,7 +178,7 @@ function authStateObserver(user) {
     userNameElement.removeAttribute('hidden');
     userPicElement.removeAttribute('hidden');
     signOutButtonElement.removeAttribute('hidden');
-    messageInfo.removeAttribute('hidden');
+    messageInfo.removeAttribute('hidden');  
 
     // Hide sign-in button.
     signInButtonElement.setAttribute('hidden', 'true');
@@ -284,6 +284,15 @@ function checkSetup() {
 }
 
 //
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+      x.className += " responsive";
+  } else {
+      x.className = "topnav";
+  }
+}
 // Checks that Firebase has been imported.
 checkSetup();
 
