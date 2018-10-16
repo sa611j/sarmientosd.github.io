@@ -129,8 +129,7 @@ function requestNotificationsPermissions() {
 
 // Triggered when a file is selected via the media picker.
 function onMediaFileSelected(event) {
-  event.preventDe
-  ult();
+  event.preventDefault();
   var file = event.target.files[0];
 
   // Clear the selection in the file picker input.
