@@ -55,8 +55,8 @@
 
 <div class="topnav" id="myTopnav">
       <a href="index.html" class="active">Home</a>
-      <a href="chat.html">News</a>
-      <a href="game.html">Contact</a>
+      <a href="chat.html">Chat</a>
+      <a href="game.html">Games Info</a>
       <a href="#about">About</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
@@ -69,7 +69,7 @@
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
           <div class="top_left">
-              <div id="logo"><a title="Home"><img src="logo.png"></a></div>
+              <div id="logo"><a href="https://www.mytisa.net/" title="Home"><img src="logo.png"></a></div>
           </div> 
       </div>
       <div id="user-container">
@@ -87,37 +87,67 @@
 
   <main class="mdl-layout__content mdl-color--grey-100">
     <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
-
-      <!-- Messages container -->
-      <div  hidden id="messages-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
-        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-          <div id="messages">
-            <span id="message-filler"></span>
-          </div>
-          <form id="message-form" action="#">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="message">
-              <label class="mdl-textfield__label" for="message">Message...</label>
-            </div>
-            <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-              Send
-            </button>
-          </form>
-          <form id="image-form" action="#">
-            <input id="mediaCapture" type="file" accept="image/*" capture="camera">
-            <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
-              <i class="material-icons">image</i>
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
-        <div class="mdl-snackbar__text"></div>
-        <button class="mdl-snackbar__action" type="button"></button>
-      </div>
-
-    </div>
+            <div id="main-content" class="container">
+                    <h2 id="menu-categories-title" class="text-center">Games Categories</h2>
+                    <div class="text-center">
+                      Games description.
+                    </div>
+                
+                    <section class="row">
+                      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                        <a href="single-category.html">
+                          <div class="category-tile">
+                            <img width="200" height="200" src="images/img1.png" alt="Lunch">
+                            <span>Lunch</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                        <a href="single-category.html">
+                          <div class="category-tile">
+                            <img width="200" height="200" src="images/img2.png" alt="Lunch">
+                            <span>Lunch</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                        <a href="single-category.html">
+                          <div class="category-tile">
+                            <img width="200" height="200" src="images/img3.png" alt="Lunch">
+                            <span>Lunch</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                        <a href="single-category.html">
+                          <div class="category-tile">
+                            <img width="200" height="200" src="images/img4.png" alt="Lunch">
+                            <span>Lunch</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                        <a href="single-category.html">
+                          <div class="category-tile">
+                            <img width="200" height="200" src="images/img5.png" alt="Lunch">
+                            <span>Lunch</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                        <a href="single-category.html">
+                          <div class="category-tile">
+                            <img width="200" height="200" src="images/img6.png" alt="Lunch">
+                            <span>Lunch</span>
+                          </div>
+                        </a>
+                      </div>
+                        </a>
+                      </div>
+                    </section>
+                
+                  </div><!-- End of #main-content -->
+ 
   </main>
 </div>
 
