@@ -182,10 +182,6 @@ function authStateObserver(user) {
 
     // Hide sign-in button.
     signInButtonElement.setAttribute('hidden', 'true');
-    // Hide home info.
-    homegeInfo.setAttribute('hidden', 'true');
-    gameInfo.setAttribute('hidden','true');
-
 
     // We save the Firebase Messaging Device token and enable notifications.
     saveMessagingDeviceToken();
@@ -194,12 +190,9 @@ function authStateObserver(user) {
     userNameElement.setAttribute('hidden', 'true');
     userPicElement.setAttribute('hidden', 'true');
     signOutButtonElement.setAttribute('hidden', 'true');
-    messageInfo.setAttribute('hidden', 'true');
 
     // Show sign-in button.
     signInButtonElement.removeAttribute('hidden');
-    homegeInfo.removeAttribute('hidden');
-
   }
 }
 
@@ -300,36 +293,6 @@ function myFunction() {
       x.className = "topnav";
   }
 }
-
-function homeFunction() {
-  userNameElement.setAttribute('hidden', 'true');
-  userPicElement.setAttribute('hidden', 'true');
-  signOutButtonElement.setAttribute('hidden', 'true');
-  messageInfo.setAttribute('hidden', 'true');
-  gameInfo.setAttribute('hidden','true');
-  homegeInfo.removeAttribute('hidden');
-}
-function chatFunction() {
-    firebase.auth().onAuthStateChanged(authStateObserver);
-
-}
-function gameFunction() {
-  userNameElement.setAttribute('hidden', 'true');
-  userPicElement.setAttribute('hidden', 'true');
-  signOutButtonElement.setAttribute('hidden', 'true');
-  messageInfo.setAttribute('hidden', 'true');
-  homegeInfo.setAttribute('hidden','true');
-  gameInfo.removeAttribute('hidden');
-}
-function aboutFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-      x.className += " responsive";
-  } else {
-      x.className = "topnav";
-  }
-}
-
 // Checks that Firebase has been imported.
 checkSetup();
 
@@ -346,17 +309,19 @@ var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
-var messageInfo =  document.getElementById('messages-card');
-var homegeInfo =  document.getElementById('home-container');
-var gameInfo =  document.getElementById('game-container');
+var fileName = location.href.split("/").slice(-1); 
+
 // Saves message on form submit.
-messageFormElement.addEventListener('submit', onMessageFormSubmit);
+if(fileName == "chat.html"){
+  messageFormElement.addEventListener('submit', onMessageFormSubmit);
+  messageInputElement.addEventListener('keyup', toggleButton);
+  messageInputElement.addEventListener('change', toggleButton);
+
+}
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
 
 // Toggle for the button.
-messageInputElement.addEventListener('keyup', toggleButton);
-messageInputElement.addEventListener('change', toggleButton);
 
 // Events for image upload.
 imageButtonElement.addEventListener('click', function(e) {
